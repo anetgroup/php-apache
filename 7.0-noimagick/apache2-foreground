@@ -35,7 +35,7 @@ echo "
 for SN in ${SERVER_NAME[@]}; do
     echo "
 
-    <VirtualHost $PORTS>
+    <VirtualHost *:80 $PORTS>
       ServerName $SN
       ServerAlias *.$SN
       DocumentRoot $CI_PROJECT_DIR/www
